@@ -1,0 +1,38 @@
+|*****************************************************|
+|		TC/BSD Handy Commands		      	|
+|*****************************************************|
+/usr/local/etc/TwinCAT/3.1/Target/License/ -> TwinCAT/BSD
+
+IPC Diagnostics www folder in /usr/local
+
+// Check TC Version or set System Service state
+doas TcSysExe.exe
+doas TcSysExe.exe --config
+doas TcSysExe.exe --run
+
+// Do major upgrade in /usr/local/bin
+doas tcbsd-upgrade major
+doas pkg upgrade
+
+// roll back to previous snapshot
+doas restorepoint rollback factoryreset
+
+// shutdown
+doas shutdown -p now
+
+// check service status and/or stop/restart
+doas service service_name status
+
+// Find all processes with TcHmiSrv in name
+ps aux | grep TcHmiSrv
+
+// Disable Firewall
+doas service pf stop
+
+// find USB drive | list device | mount to folder
+doas camcontrol devlist
+gpart list <mediaName>
+doas mount -t msdosfs /dev/da0p1 /usr/local/etc/myDisk
+
+// unmount
+doas umount /dev/da0p1
