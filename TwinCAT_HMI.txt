@@ -1,0 +1,123 @@
+// Change content function
+TcHmi.Controls.get("TcHmiHostRegion").setTargetContent("Content/Pages/SamplePage.content")
+// change view page
+TcHmi.View.load('View1.view') 
+// Focus out | Blurrs the focus
+$(':focus').blur() 
+// Only allows numbers to be inputed
+$('#TcHmiTextbox input').attr('Type', 'number') 
+
+// Password protected
+$('#TcHmi_TextBox_Password input').attr('Type', 'Password') 
+
+// Character limit
+$('#TcHmiTextbox input').attr('maxlength','10'); 
+
+// sets focus to the input of a textbox
+$('#tbEnterText input').focus();  
+
+// open UserManagement in separate window
+window.open("http://127.0.0.1:1010/Config/TcHmiUserManagement?Configuration=default", "_blank", "fullscreen=no"); 
+
+// closes current browser tab but may not always work
+open(location, '_self').close(); 
+window.open('', '_self', ''); window.close();
+
+// detect max amount of touchpoints
+navigator.maxTouchPoints 
+
+$('#TcHmiDatagrid input').click(function() {
+    $(this).select();
+});
+
+// Prevent typing on specific input control. Can remove the Id and prevents typing on all input controls
+$('#TcHmiNumericInput input').keypress(function(e) {
+    return false
+});
+
+// forcelogout a sessionId (not finished but get schema below)
+TcHmi.Server.writeSymbol("GetSchema", {"symbol": "ForceLogout"}, data=>console.log(data))
+
+FULLSCREEN_FUNCTION(){
+      	  var doc = window.document;
+      	  var docEl = doc.documentElement;
+
+      	  var requestFullScreen = docEl.requestFullscreen || docEl.mozRequestFullScreen || docEl.webkitRequestFullScreen || docEl.msRequestFullscreen;
+      	  var cancelFullScreen = doc.exitFullscreen || doc.mozCancelFullScreen || doc.webkitExitFullscreen || doc.msExitFullscreen;
+
+      	  if(!doc.fullscreenElement && !doc.mozFullScreenElement && !doc.webkitFullscreenElement && !doc.msFullscreenElement) {
+      		requestFullScreen.call(docEl);
+      	  }
+      	  else {
+      		cancelFullScreen.call(doc);
+      	  }
+}
+
+// Start Second TcHmi Server Service (Stop TcHmiSrv Service & beware of used licenses)
+TcHmiSrv.exe --serviceDir="C:\ProgramData\Beckhoff\TF2000 TwinCAT 3 HMI Server" --serviceAddInstance=TcHmiProject2 --endpoint=https://0.0.0.0:1022 --endpoint=http://127.0.0.1:1012
+
+// Show ALL symbols in config using "advanced=true" at end of url
+http://127.0.0.1:1010/Config/TcHmiSrv?Content=CATEGORY_SYMBOLS&Configuration=default&advanced=true
+
+
+// Dynamic way of grabbing the Id of a UserControl and highlighting the text of an input field
+var symbol = new TcHmi.Symbol('%pp%Identifier::Identifier%/pp%');
+symbol.readEx(function (data) {
+    if (data.error === TcHmi.Errors.NONE) {
+        // Handle result value... 
+        var value = data.value; 
+        console.log(value.__id);  
+      
+        $('#'+ value.__id + ' input').click(function() {
+    		$(this).select();
+		});
+
+    } else {
+        // Handle error... 
+    }
+});
+
+$('#Identifier_Here').click(function() {
+    		$(this).select();
+		});
+
+
+
+(******************************************************
+	START DOWNLOAD HISTORIZED DATA
+********************************************************)
+TcHmi.Server.writeSymbol("TcHmiSqliteHistorize.GetTrendLineData", {"chartName": "TcHmiTrendLineChart","xAxisStart": "PT2M","xAxisEnd": "Latest","yAxes": [{"symbol": "PLC1.MAIN.Sinus"},{"symbol": "PLC1.MAIN.Ramp"}],"displayWidth": 828}, function(data){
+var downloaderAElement = document.createElement('a');
+var sName = "TestDownload";
+downloaderAElement.download = sName.replace(/::/g,'_') + '.json';
+
+let jsonExport = tchmi_clone_object(data.response);
+jsonExport.commands[0].writeValue = jsonExport.commands[0].readValue;
+delete jsonExport.commands[0].readValue;
+delete jsonExport.sessionId;
+delete jsonExport.id;
+
+//console.log(JSON.stringify(jsonExport, null, 2));
+
+downloaderAElement.href = 'data:application/json;utf8,' + JSON.stringify(jsonExport, null, 2);
+downloaderAElement.style.display = 'none';
+document.body.appendChild(downloaderAElement);
+downloaderAElement.click();
+document.body.removeChild(downloaderAElement);
+
+ 
+});
+(*************************************************
+	END DOWNLOAD HISTORIZED DATA
+**************************************************)
+// Log in as Sys Admin
+TcHmi.Server.loginEx2('__SystemAdministrator', '1', false, true, { timeout: 2000 }, function(data) {
+    console.log('User login not successful.');
+});
+
+// Disable the select text copy/paste option
+$(document).ready(function() {
+  $('#TcHmiTextbox').bind('cut copy', function(e) {
+      e.preventDefault();
+    });
+});
