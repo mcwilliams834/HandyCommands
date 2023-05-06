@@ -87,9 +87,11 @@ git push -u origin main
 // look at remote branches
 git branch -r 
 
-// default fetches origin but can also fetch a specifc branch 
+// default fetches origin but can also fetch a specifc branch
+// does not merge changes into your current HEAD branch (Safe to do anytime)
 git fetch <remote>
 git fetch <remote> <branch>
 
-// will fetch latest changes and merge into current branch
+// fetches latest changes and updates current branch with the new changes, merging them in
+// can result in merge conflicts (not recommended if you have uncommitted changes)
 git pull
