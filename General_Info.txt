@@ -1,0 +1,58 @@
+// Automate initialization in declaration. see D:\PLC_Examples\AutomateInitialization
+FB_Test_1: FB_Test := (In_A := [(SIZEOF(FB_Test_1.In_A)/SIZEOF(FB_Test_1.In_A[0]))(1.0)], Out_A := [(SIZEOF(FB_Test_1.Out_A)/SIZEOF(FB_Test_1.Out_A[0]))(1.0)]);
+
+// Crash dumps for UserMode Apps (Visual Studios)
+C:\Users\MichaelWil\AppData\Local\CrashDumps
+
+// Location for code snippets in VS
+C:\Users\<userName>\Documents\Visual Studio 2017\Code Snippets\TypeScript\TcHmiSnippets\FrameworkControls\Attributes
+
+(****************************************************
+	BUILDING AUTOMATION CONTROL
+*****************************************************)
+Log in to the building automation site
+
+log in as BLT
+
+13579
+
+open up the console
+
+copy in and execute this whole line
+
+BlindsRoom = "PLC1.gvlMain.stHmiMain::astRooms[1][4]::astHmiBlinds";
+
+TcHmi.Server.writeSymbol([BlindsRoom + "[2]::eControlState", BlindsRoom + "[1]::eControlState"], [1,1],function(data){
+
+TcHmi.Server.writeSymbol([BlindsRoom + "[2]::rBlindPositionSet", BlindsRoom + "[1]::rBlindPositionSet"], [100,100],function(data){console.log(data)});
+
+});
+
+BlindsRoom is the target, ControlState 1,1 is "Manual", 0 is fully open, 100 is fully closed
+
+
+(****************************************************
+	END BUILDING AUTOMATION CONTROL
+*****************************************************)
+
+
+LICENSING FOLDERS
+c:\twincat\3.1\target\license -> big windows
+
+\Hard Disk\TwinCAT\3.1\target\license -> windows CE
+
+/usr/local/etc/TwinCAT/3.1/Target/License/ -> TwinCAT/BSD
+
+LICENSING STUDIO
+\\beckhoff.com\DFS\TwinCatDatenbank\LizenzStudio\Setups\Live\LicenseStudio_LiveTest\setup.exe
+
+TcHmi Template Folder
+C:\Users\MichaelWil\Documents\Visual Studio 2017\My Exported Templates\
+
+//BSOD Tools
+WinDB
+Diaganalysis
+
+bcdedit /set hypervisorlaunchtype off
+bcdedit /set numproc 4
+test-netconnection 10.12.64.61 -p 48898
