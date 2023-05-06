@@ -121,3 +121,26 @@ $(document).ready(function() {
       e.preventDefault();
     });
 });
+
+
+// CSS Animation to blink infinitley
+.tchmi-class-BlinkingLight {
+    animation-name: blink;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        background-color: red;
+    }
+
+    100% {
+        background-color: none;
+    }
+}
+
+//Remove Unused Definitions
+TcHmi.Server.writesymbol('RemoveUnuseDefinitions', null, data=>console.log(data));
+
+// TcHmiSrv GetSchema
+C:\TwinCAT\Functions\TE200-HMI-Engineering\Infrastructure\TcHmiServer\docs\Samples
