@@ -1,0 +1,95 @@
+|*****************************************************|
+|		GIT Handy Commands		      	|
+|*****************************************************|
+
+// create repo 
+git init
+
+// check status
+git status
+
+// create file
+touch
+// create directory
+mkdir
+
+// List all file, including hidden
+ls -al
+
+// Remove files
+rm
+// Remove folder
+rm -requestFullScreen
+
+// stage files to be committed
+git add
+// stage all files to be committed
+git add .
+// commit staged files with a message
+git commit -m 
+// add and commit
+git commit -a -m
+
+// review commit log
+git log
+git log --oneline // pretty
+
+// Opens previous commit message to change or can change committed files but need to add them before. Only works if you haven't done another commit
+git commit --ammend
+
+// shows branches
+git branch
+// creates branch
+git branch <branch-name>
+// switch branch
+git switch <branch-name>
+git checkout <branch-nam> // old way and does other things too
+
+// create and switch to new branch
+git switch -c <branch-name>
+
+// delete branch (capital -D to force delete)
+git branch -d <branch-name>
+
+// rename branch (have to change to the branch to rename)
+git branch -m <new-name>
+
+// merge's specifed branch into current branch
+git merge <branch-name>
+
+// saves uncommitted changes and removes them from working tree 
+git stash
+// brings back your stashed 
+git stash pop
+
+// enter detached head state to go back to an earlier commit
+git checkout <commit-hash>
+// checkout previous commit
+git checkout HEAD~1
+//checkout 2 previous commits before
+git checkout HEAD~2
+// restore a file to a previous commit. Can also use HEAD~1 syntax
+git restore --source <commit-hash> <file-name>
+// remove commits, keeps the changes 
+git reset <commit-hash>
+// remove commits and discard changes
+git reset --hard <commit-hash>
+// similar to git reset, as it undos changes but revert creates a new commit which reverses/undos the changes.
+git revert <commit-hash>
+
+// checkout remote branch pointers. puts you ina 'detached head' state
+git checkout origin/master
+
+// To push new repo on Github, create new repository, then run below from git bash 
+git remote add origin <Github-Repo>
+git push -u origin main 
+
+// look at remote branches
+git branch -r 
+
+// default fetches origin but can also fetch a specifc branch 
+git fetch <remote>
+git fetch <remote> <branch>
+
+// will fetch latest changes and merge into current branch
+git pull
