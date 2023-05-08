@@ -139,6 +139,26 @@ $(document).ready(function() {
     }
 }
 
+
+// Highlight the last selected TcHmiTextblock (CSS needed)
+var lines = document.querySelectorAll('[data-tchmi-type="TcHmi.Controls.Beckhoff.TcHmiTextblock"]');
+lines.forEach(line => {
+    line.addEventListener('click', () => {
+        // remove highlight from all lines
+        lines.forEach(line => {
+            line.classList.remove('selected');
+        });
+
+        // add highlight to clicked line
+        line.classList.add('selected');
+    });
+});
+// CSS below
+.selected {
+    background-color: yellow;
+}
+
+
 //Remove Unused Definitions
 TcHmi.Server.writesymbol('RemoveUnuseDefinitions', null, data=>console.log(data));
 
