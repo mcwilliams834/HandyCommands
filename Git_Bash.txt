@@ -28,7 +28,9 @@ git add .
 // commit staged files with a message
 git commit -m 
 // add and commit
-git commit -a -m
+git commit -am
+// untrack a file that has been added
+git rm --cached <filename>
 
 // review commit log
 git log
