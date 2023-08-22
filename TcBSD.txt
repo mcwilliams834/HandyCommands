@@ -4,35 +4,99 @@
 /usr/local/etc/TwinCAT/3.1/Target/License/ -> TwinCAT/BSD
 
 IPC Diagnostics www folder in /usr/local
+#Do As Administrator this is Tc/BSDs version of Right-Clicking and running as Administrator
+doas
 
-// Check TC Version or set System Service state
+#Make a new folder
+mkdir ./directoryname
+#Make a new folder and any  folders in the path that don't already exist.
+mkdir -p ./vms/ubuntu-vm
+
+#change directory
+cd /usr/local/
+#change directory to root
+cd /
+#change directory up one level 
+cd ..
+#change directory up more than one level
+cd ../.. 
+
+#PKG
+#install from repository
+pkg install package-name
+#update local repository information
+pkg update
+#update version of package
+pkg upgrade package-name
+#update all package versions
+pkg upgrade
+#install offline package -U forces pkg to not update from the repository
+pkg install -U /directory/package-name
+
+# Check TC Version or set System Service state
 doas TcSysExe.exe
 doas TcSysExe.exe --config
 doas TcSysExe.exe --run
+doas TcSysExe.exe --license
 
-// Do major upgrade in /usr/local/bin
+# Do major upgrade in /usr/local/bin
 doas tcbsd-upgrade major
 doas pkg upgrade
 
-// roll back to previous snapshot
-doas restorepoint rollback factoryreset
+#Snapshot program
+restorepoint
+#create a new snapshot snapshot can be named if no name given the name will be a timestamp
+doas restorepoint create newsnapshot
+#rollback to previous snapshot
+doas restorepoint rollback newsnapshot
+#factory reset Tc/BSD
+doas retorepoint rollback factoryreset
+#get a list of snapshots
+doas restorepoint status
+#change variable in rc.conf without an editor
+doas sysrc ifconfig_em0="inet 192.168.0.1 netmask 255.255.255.0"
 
-// shutdown
+# shutdown
 doas shutdown -p now
 
-// check service status and/or stop/restart
+# reboot
+doas reboot
+
+# check service status and/or stop/restart
 doas service service_name status
 
-// Find all processes with TcHmiSrv in name
+# Find all processes with TcHmiSrv in name
 ps aux | grep TcHmiSrv
 
-// Disable Firewall
+# Disable Firewall
 doas service pf stop
 
-// find USB drive | list device | mount to folder
+# find USB drive | list device | mount to folder
 doas camcontrol devlist
 gpart list <mediaName>
 doas mount -t msdosfs /dev/da0p1 /usr/local/etc/myDisk
 
-// unmount
+#Show all partitions
+gpart show
+
+#Restart DHCPcd client
+doas service dhclient restart
+
+# unmount
 doas umount /dev/da0p1
+
+#get the device message logs
+dmesg
+
+#Easy Editor
+ee
+#in order to edit and save files use doas
+doas ee /directory/file-name
+
+#Fix for Tc/BSD not powering down on shutdown -p
+#Which file to edit:
+/etc/sysctl.conf
+
+#The fix:
+# shutdown fix
+hw.efi.poweroff=0
