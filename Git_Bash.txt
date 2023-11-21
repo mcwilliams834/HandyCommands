@@ -10,6 +10,7 @@ git status
 
 // create file
 touch
+
 // create directory
 mkdir
 
@@ -18,34 +19,45 @@ ls -al
 
 // Remove files
 rm
+
 // Remove folder
 rm -requestFullScreen
 
 // stage files to be committed
 git add
-// stage all files to be committed
+
+// stage all files to be staged and committed
 git add .
+
 // commit staged files with a message
 git commit -m 
-// add and commit
+
+// add files to stage and commit with a message
 git commit -am
+
 // untrack a file that has been added
 git rm --cached <filename>
 
 // review commit log
 git log
-git log --oneline // pretty
+
+// review commit log in pretty format
+git log --oneline 
 
 // Opens previous commit message to change or can change committed files but need to add them before. Only works if you haven't done another commit
 git commit --ammend
 
 // shows branches
 git branch
+
 // creates branch
 git branch <branch-name>
+
 // switch branch
 git switch <branch-name>
-git checkout <branch-nam> // old way and does other things too
+
+// old way to switch branch and does other things too
+git checkout <branch-nam> 
 
 // create and switch to new branch
 git switch -c <branch-name>
@@ -61,21 +73,28 @@ git merge <branch-name>
 
 // saves uncommitted changes and removes them from working tree 
 git stash
+
 // brings back your stashed 
 git stash pop
 
 // enter detached head state to go back to an earlier commit
 git checkout <commit-hash>
+
 // checkout previous commit
 git checkout HEAD~1
+
 //checkout 2 previous commits before
 git checkout HEAD~2
+
 // restore a file to a previous commit. Can also use HEAD~1 syntax
 git restore --source <commit-hash> <file-name>
+
 // remove commits, keeps the changes 
 git reset <commit-hash>
+
 // remove commits and discard changes
 git reset --hard <commit-hash>
+
 // similar to git reset, as it undos changes but revert creates a new commit which reverses/undos the changes.
 git revert <commit-hash>
 

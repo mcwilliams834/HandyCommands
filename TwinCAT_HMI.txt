@@ -1,9 +1,12 @@
 // Change content function
 TcHmi.Controls.get("TcHmiHostRegion").setTargetContent("Content/Pages/SamplePage.content")
+
 // change view page
 TcHmi.View.load('View1.view') 
+
 // Focus out | Blurrs the focus
 $(':focus').blur() 
+
 // Only allows numbers to be inputed
 $('#TcHmiTextbox input').attr('Type', 'number') 
 

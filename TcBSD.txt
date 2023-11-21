@@ -1,10 +1,10 @@
 |*****************************************************|
-|		TC/BSD Handy Commands		      	|
+|		TC/BSD Handy Commands		      	          |
 |*****************************************************|
 /usr/local/etc/TwinCAT/3.1/Target/License/ -> TwinCAT/BSD
 
 IPC Diagnostics www folder in /usr/local
-#Do As Administrator this is Tc/BSDs version of Right-Clicking and running as Administrator
+#doas Administrator this is Tc/BSDs version of Right-Clicking and running as Administrator
 doas
 
 #Make a new folder
@@ -12,16 +12,17 @@ mkdir ./directoryname
 #Make a new folder and any  folders in the path that don't already exist.
 mkdir -p ./vms/ubuntu-vm
 
-#change directory
+#change directory (Direct path)
 cd /usr/local/
 #change directory to root
 cd /
 #change directory up one level 
 cd ..
-#change directory up more than one level
+#change directory up more than one level (relative path)
 cd ../.. 
 
-#PKG
+#PKG Website
+tcbsd.beckhoff.com/TCBSD/13/stable/packages/packagesite.html
 #install from repository
 pkg install package-name
 #update local repository information
@@ -32,6 +33,10 @@ pkg upgrade package-name
 pkg upgrade
 #install offline package -U forces pkg to not update from the repository
 pkg install -U /directory/package-name
+# Search repo for a package with matching name
+pkg search
+pkg info
+pkg delete
 
 # Check TC Version or set System Service state
 doas TcSysExe.exe
@@ -40,7 +45,9 @@ doas TcSysExe.exe --run
 doas TcSysExe.exe --license
 
 # Do major upgrade in /usr/local/bin
-doas tcbsd-upgrade major
+doas tcbsd-upgrade --major
+# Minor upgrade (13.0 -> 13.2)
+doas tcbsd-upgrade --minor
 doas pkg upgrade
 
 #Snapshot program
@@ -100,3 +107,9 @@ doas ee /directory/file-name
 #The fix:
 # shutdown fix
 hw.efi.poweroff=0
+
+#How many users (terminals) are connected
+who
+
+# write filter Requires a reboot of the system
+doas service bwf enable 
