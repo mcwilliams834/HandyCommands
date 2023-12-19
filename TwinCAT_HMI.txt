@@ -56,6 +56,50 @@ FULLSCREEN_FUNCTION(){
       	  }
 }
 
+// code to grab the keyCode on "keydown" and write code to a Textblock
+const input = document.getElementById("TcHmiTextbox_1");
+
+input.addEventListener("keydown", logKey);
+
+function logKey(e) {
+  console.log(` ${e.keyCode}`);
+
+  TcHmi.Symbol.writeEx('%ctrl%TcHmiTextblock::Text%/ctrl%', `${e.keyCode}`, function (data) {
+    if (data.error === TcHmi.Errors.NONE) {
+        // Handle success... 
+        console.log("yesssss");
+    } else {
+        // Handle error... 
+        console.log("nooooooo");
+    }
+});
+}
+
+// JQuery to limit what keys user can press based on keyCode
+$("#TcHmiTextbox input").bind({
+    keydown: function(e) {
+        if (e.shiftKey === true ) {
+            if (e.keyCode  == 9) {
+                return true;
+            }
+            return false;
+        }
+       if (e.keyCode == 190){
+           return true;
+        }
+
+        if (e.keyCode  > 57) {
+            return false;
+        }
+
+        if (e.keyCode ==32) {
+            return false;
+        }
+
+        return true;
+    }
+});
+
 // Start Second TcHmi Server Service (Stop TcHmiSrv Service & beware of used licenses)
 TcHmiSrv.exe --serviceDir="C:\ProgramData\Beckhoff\TF2000 TwinCAT 3 HMI Server" --serviceAddInstance=TcHmiProject2 --endpoint=https://0.0.0.0:1022 --endpoint=http://127.0.0.1:1012
 
