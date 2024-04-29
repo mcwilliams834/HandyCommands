@@ -53,6 +53,9 @@ C:\Users\MichaelWil\Documents\Visual Studio 2017\My Exported Templates\
 WinDB
 Diaganalysis
 
+//Get serial number
+wmic bios get serialnumber
+
 bcdedit /set hypervisorlaunchtype off
 bcdedit /set numproc 4
 test-netconnection 10.12.64.61 -p 48898

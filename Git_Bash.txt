@@ -116,3 +116,6 @@ git fetch <remote> <branch>
 // fetches latest changes and updates current branch with the new changes, merging them in
 // can result in merge conflicts (not recommended if you have uncommitted changes)
 git pull
+
+// compare two commits
+git diff <CommitHash> <CommitHash>
