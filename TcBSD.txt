@@ -42,7 +42,7 @@ pkg delete
 doas TcSysExe.exe
 doas TcSysExe.exe --config
 doas TcSysExe.exe --run
-doas TcSysExe.exe --license
+doas TcSysExe.exe --licenses
 
 # Do major upgrade in /usr/local/bin
 doas tcbsd-upgrade --major
