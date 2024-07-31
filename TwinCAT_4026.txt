@@ -1,0 +1,2 @@
+// Directory where packages are installed locally
+C:\ProgramData\Beckhoff\TcPkg\lib
