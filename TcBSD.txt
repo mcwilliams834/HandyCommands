@@ -45,9 +45,9 @@ doas TcSysExe.exe --run
 doas TcSysExe.exe --licenses
 
 # Do major upgrade in /usr/local/bin
-doas tcbsd-upgrade --major
+doas tcbsd-upgrade major
 # Minor upgrade (13.0 -> 13.2)
-doas tcbsd-upgrade --minor
+doas tcbsd-upgrade minor
 doas pkg upgrade
 
 #Snapshot program

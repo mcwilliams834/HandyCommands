@@ -1,2 +1,6 @@
 // Directory where packages are installed locally
 C:\ProgramData\Beckhoff\TcPkg\lib
+
+// Package Manager Install versions
+1.0.540.0 --> 2.1.86
+1.0.545.0 --> 2.1.90
