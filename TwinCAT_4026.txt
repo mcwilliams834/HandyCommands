@@ -8,4 +8,17 @@ C:\ProgramData\Beckhoff\TcPkg\lib
 // OEM Certificate Directory
 C:\ProgramData\Beckhoff\TwinCAT\3.1\CustomConfig\Certificates
 
+// License director
 C:\ProgramData\Beckhoff\TwinCAT\3.1\License
+
+// Diagnostic data dir
+C:\ProgramData\Beckhoff\TcPkgUI_DiagData\
+
+// Usermode Runtime
+C:\ProgramData\Beckhoff\TwinCAT\3.1\Runtimes
+
+// Usermode template
+C:\Program Files (x86)\Beckhoff\TwinCAT\3.1\Runtimes
+
+// column editing
+shift + alt (using mouse) || shift + alt (arrow keys)
