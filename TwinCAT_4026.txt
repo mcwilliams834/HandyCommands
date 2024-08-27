@@ -7,3 +7,5 @@ C:\ProgramData\Beckhoff\TcPkg\lib
 
 // OEM Certificate Directory
 C:\ProgramData\Beckhoff\TwinCAT\3.1\CustomConfig\Certificates
+
+C:\ProgramData\Beckhoff\TwinCAT\3.1\License
