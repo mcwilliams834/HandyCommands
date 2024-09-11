@@ -31,6 +31,8 @@ C:\ProgramData\Beckhoff\TwinCAT\PlcEngineering\PlugInCaches\Build_4026.10-Build_
 C:\ProgramData\Beckhoff\TwinCAT\PlcEngineering\PlugInCaches\Build_4026.10-Build_4026.10-E1B5621D.cache
 C:\ProgramData\Beckhoff\TwinCAT\PlcEngineering\Devices\devicecache.xml
 
+// TcPkgUi Config Files
+C:\Users\MichaelWil\AppData\Local\Beckhoff\TcPkgUI\config\Default.json
 
 (*****************************************************
   ALL PACKAGES INLCUDED FOR TWINCAT XAE INSTALLATION
