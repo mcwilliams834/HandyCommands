@@ -23,18 +23,26 @@ cd ../..
 
 #PKG Website
 tcbsd.beckhoff.com/TCBSD/13/stable/packages/packagesite.html
+
 #install from repository
 pkg install package-name
+
 #update local repository information
 pkg update
+
 #update version of package
 pkg upgrade package-name
+
 #update all package versions
 pkg upgrade
+
 #install offline package -U forces pkg to not update from the repository
 pkg install -U /directory/package-name
+
 # Search repo for a package with matching name
 pkg search
+
+# Look up Package information such as version
 pkg info
 pkg delete
 
@@ -46,20 +54,26 @@ doas TcSysExe.exe --licenses
 
 # Do major upgrade in /usr/local/bin
 doas tcbsd-upgrade major
+
 # Minor upgrade (13.0 -> 13.2)
 doas tcbsd-upgrade minor
 doas pkg upgrade
 
 #Snapshot program
 restorepoint
+
 #create a new snapshot snapshot can be named if no name given the name will be a timestamp
 doas restorepoint create newsnapshot
+
 #rollback to previous snapshot
 doas restorepoint rollback newsnapshot
+
 #factory reset Tc/BSD
 doas retorepoint rollback factoryreset
+
 #get a list of snapshots
 doas restorepoint status
+
 #change variable in rc.conf without an editor
 doas sysrc ifconfig_em0="inet 192.168.0.1 netmask 255.255.255.0"
 
