@@ -58,4 +58,9 @@ wmic bios get serialnumber
 
 bcdedit /set hypervisorlaunchtype off
 bcdedit /set numproc 4
+
+// Check if ADS port is open
 test-netconnection 10.12.64.61 -p 48898
+
+// Check what ports are open and/or running
+Netstat -ano
