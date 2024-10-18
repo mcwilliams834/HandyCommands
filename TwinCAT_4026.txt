@@ -4,6 +4,7 @@ C:\ProgramData\Beckhoff\TcPkg\lib
 // Package Manager Install versions
 1.0.540.0 --> 2.1.86
 1.0.545.0 --> 2.1.90
+1.0.617.0 --> 2.1.134
 
 // OEM Certificate Directory
 C:\ProgramData\Beckhoff\TwinCAT\3.1\CustomConfig\Certificates
