@@ -7,6 +7,10 @@ C:\ProgramData\Beckhoff\TcPkg\lib
 1.0.545.0 --> 2.1.90
 1.0.617.0 --> 2.1.134
 
+// As of November 19th 2024, the latest TE2000 workload is 14.2.13 with EventLogger 14.2.102
+// TF2000 14.2.4 with Server 14.2.102
+
+
 // OEM Certificate Directory
 C:\ProgramData\Beckhoff\TwinCAT\3.1\CustomConfig\Certificates
 
