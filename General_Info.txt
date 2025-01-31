@@ -64,3 +64,6 @@ test-netconnection 10.12.64.61 -p 48898
 
 // Check what ports are open and/or running
 Netstat -ano
+
+// openssl which already installed via git and safe to use
+C:\Program Files\Git\usr\bin\openssl.exe
