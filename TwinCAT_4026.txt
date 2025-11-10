@@ -2,10 +2,18 @@
 C:\ProgramData\Beckhoff\TcPkg\lib
 
 // Package Manager Install versions
+***GUI***  ***CLI***
 1.0.455.0 --> 2.1.35
 1.0.540.0 --> 2.1.86
 1.0.545.0 --> 2.1.90
 1.0.617.0 --> 2.1.134
+          --> 2.2.90
+          --> 2.2.95
+          --> 2.2.99
+2.0.17    --> 2.2.101
+          --> 2.3.25
+2.0.30    --> 2.3.55
+          --> 2.3.65
 
 // As of November 19th 2024, the latest TE2000 workload is 14.2.13 with EventLogger 14.2.102
 // TF2000 14.2.4 with Server 14.2.102
@@ -32,6 +40,9 @@ shift + alt (using mouse) || shift + alt (arrow keys)
 // CreateLiense.exe
 C:\Program Files (x86)\Beckhoff\TwinCAT\3.1\Components\Base\License
 
+// License .TMC Files
+C:\Program Files (x86)\Beckhoff\TwinCAT\3.1\Config\Io
+
 // PLC Cache Files
 C:\ProgramData\Beckhoff\TwinCAT\PlcEngineering\PlugInCaches\Build_4026.10-Build_4026.10-4476FA56.cache
 C:\ProgramData\Beckhoff\TwinCAT\PlcEngineering\PlugInCaches\Build_4026.10-Build_4026.10-E1B5621D.cache
@@ -39,6 +50,17 @@ C:\ProgramData\Beckhoff\TwinCAT\PlcEngineering\Devices\devicecache.xml
 
 // TcPkgUi Config Files
 C:\Users\MichaelWil\AppData\Local\Beckhoff\TcPkgUI\config\Default.json
+C:\Users\<USERNAME>\AppData\Local\Beckhoff\TwinCAT.Package.Manager.GUI\TcPkgUiSettings.json
+
+// log files
+C:\ProgramData\Beckhoff\TcPkg\logs
+
+// Add a Feed 
+tcpkg source add -n='testing' -s='https://public.tcpkg.beckhoff-cloud.com/api/v1/feeds/testing/' --priority=2 -u='BeckhoffWebsiteLoginName'
+
+// To download a package from the browser directly
+https://public.tcpkg.beckhoff-cloud.com/api/v1/feeds/stable/FindPackagesById()?id=%27TwinCAT.XAE.DocDataProvider.VS2019%27&semVerLevel=2.0.0%27
+
 
 (*****************************************************
   ALL PACKAGES INLCUDED FOR TWINCAT XAE INSTALLATION
@@ -132,3 +154,6 @@ TwinCAT.XAR.USB
 (******
   END
 *******)
+
+
+[PACKAGE MANAGER COMMANDS]
