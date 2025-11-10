@@ -41,6 +41,9 @@ $('#TcHmiNumericInput input').keypress(function(e) {
 // forcelogout a sessionId (not finished but get schema below)
 TcHmi.Server.writeSymbol("GetSchema", {"symbol": "ForceLogout"}, data=>console.log(data))
 
+// Firewall ports to configure to allow auto-detect of TF2000 server (broadcast)
+1900  for http and 1910 for https 
+
 FULLSCREEN_FUNCTION(){
       	  var doc = window.document;
       	  var docEl = doc.documentElement;
@@ -281,3 +284,24 @@ C:\TwinCAT\Functions\TE200-HMI-Engineering\Infrastructure\TcHmiServer\docs\Sampl
 (*************************************************
 	END Switch Views Based on Resolution
 **************************************************)
+
+/* button bg color transition */
+.TcHmi_Controls_Beckhoff_TcHmiButton {
+    transition: background-color 0.5s;
+}
+
+
+/* button hover */
+.TcHmi_Controls_Beckhoff_TcHmiButton {
+    background: rgba(0,0,0,0);
+}
+    .TcHmi_Controls_Beckhoff_TcHmiButton:hover {
+        background: var(--tchmi-button-background);
+    }
+
+
+
+
+
+// TwinCAT HMI Nuget Package location
+C:\ProgramData\Beckhoff\TcPkg\lib
