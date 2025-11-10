@@ -67,3 +67,43 @@ Netstat -ano
 
 // openssl which already installed via git and safe to use
 C:\Program Files\Git\usr\bin\openssl.exe
+
+(****************************************************
+	      START SILENT INTALL COMMANDS
+*****************************************************)
+TC3-Measurement-Update.exe /silent ISFeatureInstall="TCMBASE,TE130X,TE1310,TE132X,TF3300,TE3500,VS2017EXT,VS2019EXT,TCXAESHELLEXT,TcAppRuntime,TcTypeSystem,SupportInfoReport,TargetBrowser"
+
+For HMI engineering for example it is:
+Setup.exe /s /clone_wait /v“/qr INSTALLTOVS2017=1 INSTALLTOTCXAESHELL=1 REBOOT=ReallySuppress ALLUSERS=1”
+
+For TF2000
+Setup.exe /s /clone_wait /v"/qr REBOOT=ReallySuppress ALLUSERS=1 DELSERVERCONFIG=1 ENABLEHTTP=1 HMISERVERARCHITECTURE=64"
+
+TF6421 XML Server:
+TF6421-XML-Server.exe /s /v"/qn"
+
+TF6100 OPC UA Configurator:
+TF6100-OPC-UA-Configurator.exe /S /v"/qn"
+
+TF610 OPC UA Server:
+TF6100-OPC-UA-Server-V5.exe /S /v"/qn"
+
+TF6310 TCP/IP:
+TF6310-TCP-IP.exe /S /v"/qn"
+
+TF6340 Serial Communication:
+TF6340-Serial-Communication.exe /S /v"/qn"
+
+(****************************************************
+	      END SILENT INTALL COMMANDS
+*****************************************************)
+
+// Ap
+[Assigned Staff] =  'Stef van den Crommenacker' OR [Assigned Staff] =  'Michael Williams' OR [Assigned Staff] =  'Nathan Melius' OR [Assigned Staff] =  'Matt Sundberg' OR [Assigned Staff] =  'Bryton Jobe' OR [Assigned Staff] =  'Riley Hess' OR [Assigned Staff] =  'Alexander Warner' OR [Assigned Staff] =  'Debra Lee'
+
+
+Dean  -> Monday
+Riley -> Tuesday
+Alex -> Wed
+Nathan & Steff -> Thurs
+Deb & Bryton -> Friday
