@@ -61,6 +61,9 @@ tcpkg source add -n='testing' -s='https://public.tcpkg.beckhoff-cloud.com/api/v1
 // To download a package from the browser directly
 https://public.tcpkg.beckhoff-cloud.com/api/v1/feeds/stable/FindPackagesById()?id=%27TwinCAT.XAE.DocDataProvider.VS2019%27&semVerLevel=2.0.0%27
 
+// Repair TwinCAT
+tcpkg repair TcXaeShell64.ext --include-dependencies
+tcpkg repair TcXaeShell.ext --include-dependencies
 
 (*****************************************************
   ALL PACKAGES INLCUDED FOR TWINCAT XAE INSTALLATION
@@ -157,3 +160,4 @@ TwinCAT.XAR.USB
 
 
 [PACKAGE MANAGER COMMANDS]
+// Having timeout issues
