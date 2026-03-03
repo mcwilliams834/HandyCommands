@@ -7,6 +7,9 @@ C:\Users\MichaelWil\AppData\Local\CrashDumps
 // Location for code snippets in VS
 C:\Users\<userName>\Documents\Visual Studio 2017\Code Snippets\TypeScript\TcHmiSnippets\FrameworkControls\Attributes
 
+// set a REAL to a value
+MEMSET(ADR(MyReal), 16#FF, SIZEOF(MyReal));
+
 (****************************************************
 	BUILDING AUTOMATION CONTROL
 *****************************************************)
@@ -102,8 +105,25 @@ TF6340-Serial-Communication.exe /S /v"/qn"
 [Assigned Staff] =  'Stef van den Crommenacker' OR [Assigned Staff] =  'Michael Williams' OR [Assigned Staff] =  'Nathan Melius' OR [Assigned Staff] =  'Matt Sundberg' OR [Assigned Staff] =  'Bryton Jobe' OR [Assigned Staff] =  'Riley Hess' OR [Assigned Staff] =  'Alexander Warner' OR [Assigned Staff] =  'Debra Lee'
 
 
-Dean  -> Monday
-Riley -> Tuesday
-Alex -> Wed
-Nathan & Steff -> Thurs
-Deb & Bryton -> Friday
+// ADS
+ADS requests get 'serviced' at the end of a task. So if the configuration in TwinCAT 3 for cores, number of tasks on the core, 
+load of the core is such that there is very little CPU time left before the next cycle, 
+then servicing the ads request is delayed. 
+Check that tasks are no cycle exceeding and that there is still some time left on that core after all task run before next tick that ADS can be serviced. The realtime monitor tool is good for visualizing this. 
+
+
+// regkey to hide OneDrive from file explorer.
+ 
+Windows Registry Editor Version 5.00
+ 
+[HKEY_CLASSES_ROOT\CLSID\{018D5C66-4533-4307-9B53-224DE2ED1FE6}]
+@="OneDrive"
+"System.IsPinnedToNameSpaceTree"=dword:00000000
+
+
+// Days Off Phone
+Riley/Alina  -> Monday
+Dean/Matt -> Tuesday
+Alex/Priya -> Wed
+Nathan/Steff -> Thurs
+Brian/Bryton -> Friday

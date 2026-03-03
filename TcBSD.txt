@@ -3,6 +3,10 @@
 |*****************************************************|
 /usr/local/etc/TwinCAT/3.1/Target/License/ -> TwinCAT/BSD
 
+
+// below command grabs TcRegistry, Device logs versions/drivers etc., System logs, Configuration files. Bootloader, RC config file etc., Kernal modules, Running processes
+doas bhfinfo /home/Administrator/FileOutput
+
 IPC Diagnostics www folder in /usr/local
 #doas Administrator this is Tc/BSDs version of Right-Clicking and running as Administrator
 doas
