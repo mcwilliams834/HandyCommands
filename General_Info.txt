@@ -127,3 +127,6 @@ Dean/Matt -> Tuesday
 Alex/Priya -> Wed
 Nathan/Steff -> Thurs
 Brian/Bryton -> Friday
+
+// cipher /u: displays the encryption status /n: lists all files, not just the current directory /h: displays full file path
+cipher /u /n /h
