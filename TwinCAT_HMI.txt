@@ -19,6 +19,9 @@ $('#TcHmiTextbox input').attr('maxlength','10');
 // sets focus to the input of a textbox
 $('#tbEnterText input').focus();  
 
+// refresh screen 
+location.reload();
+
 // open UserManagement in separate window
 window.open("http://127.0.0.1:1010/Config/TcHmiUserManagement?Configuration=default", "_blank", "fullscreen=no"); 
 
@@ -300,7 +303,8 @@ C:\TwinCAT\Functions\TE200-HMI-Engineering\Infrastructure\TcHmiServer\docs\Sampl
     }
 
 
-
+// Discovery ports for TcHmi Server (1.12)
+1900 for http and 1910 for https
 
 
 // TwinCAT HMI Nuget Package location
