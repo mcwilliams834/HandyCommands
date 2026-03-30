@@ -1,0 +1,12 @@
+Email Templates
+=========================================================
+There isn’t a form and the part number for C++ is TC0008.
+They will need to submit a $0 PO for TC0008.
+
+In the PO needs to include the below info:
+-	Company Name/Address
+-	List a person to be responsible for the PO (Needs to be someone that can read us the fingerprint over the phone)
+-	Contact info for the responsible person
+
+Then CSR will verify the customer/fingerprint and send to Beckhoff Germany for it to be signed. Once signed, they will send to the customer.
+=========================================================
