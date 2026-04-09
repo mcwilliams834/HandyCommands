@@ -27,6 +27,7 @@ cd ../..
 
 #PKG Website
 tcbsd.beckhoff.com/TCBSD/13/stable/packages/packagesite.html
+tcbsd.beckhoff.com/TCBSD/14/stable/packages/packagesite.html
 
 #install from repository
 pkg install package-name
