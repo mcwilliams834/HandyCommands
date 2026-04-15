@@ -125,9 +125,9 @@ Windows Registry Editor Version 5.00
 cipher /u /n /h
 
 // Days Off Phone
-Riley/Alina  -> Monday
-Dean/Matt -> Tuesday
-Alex/Priya -> Wed
-Nathan/Steff -> Thurs
-Brian/Bryton -> Friday
+Riley/Brian-> Monday
+Dean/Priya-> Tuesday
+Matt/Michaela-> Wed
+Alex/Steff -> Thurs
+Nathan/Bryton -> Friday
 
