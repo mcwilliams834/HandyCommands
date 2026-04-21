@@ -10,3 +10,12 @@ In the PO needs to include the below info:
 
 Then CSR will verify the customer/fingerprint and send to Beckhoff Germany for it to be signed. Once signed, they will send to the customer.
 =========================================================
+
+
+- Build of TwinCAT for development (XAE)
+- Build of TwinCAT for runtime controller (XAR)
+- Full part number of the controller
+- OS on the controller and OS version
+- Copy of Project and Boot Folder
+- Windows Event Logs for Application and System
+- Detailed steps to reproduce behavior 

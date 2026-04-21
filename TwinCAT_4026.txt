@@ -65,6 +65,13 @@ https://public.tcpkg.beckhoff-cloud.com/api/v1/feeds/stable/FindPackagesById()?i
 tcpkg repair TcXaeShell64.ext --include-dependencies
 tcpkg repair TcXaeShell.ext --include-dependencies
 
+// Uninstall Steps 
+tcpkg uninstall all -y
+tcpkg install TwinCAT.XAE.Migratecli -y
+close and reopen powershell with admin
+tcmigratecmd clean --whatIf False
+tcpkg uninstall all -y
+
 (*****************************************************
   ALL PACKAGES INLCUDED FOR TWINCAT XAE INSTALLATION
 ******************************************************)
