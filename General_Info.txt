@@ -111,6 +111,8 @@ load of the core is such that there is very little CPU time left before the next
 then servicing the ads request is delayed. 
 Check that tasks are no cycle exceeding and that there is still some time left on that core after all task run before next tick that ADS can be serviced. The realtime monitor tool is good for visualizing this. 
 
+//Registy location for installers
+Computer\HKEY_CURRENT_USER\Software\Microsoft\Installer\Products
 
 // regkey to hide OneDrive from file explorer.
  
