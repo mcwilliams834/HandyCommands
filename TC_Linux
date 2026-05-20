@@ -3,3 +3,15 @@ https://deb.beckhoff.com/debian/pool/main/t/
 
 //route file
 /etc/TwinCAT/3.1/TcRegistry.xml
+
+//Call NT_StartProcess from Linux shell
+NT_StartProcess(
+	NETID:= '', 
+	PATHSTR:= '/bin/sh', 
+	DIRNAME:= '/home/Administrator', 
+	COMNDLINE:= 'script.sh', 
+	START:= , 
+	TMOUT:= , 
+	BUSY=> , 
+	ERR=> , 
+	ERRID=> );
