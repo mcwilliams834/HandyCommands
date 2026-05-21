@@ -22,6 +22,9 @@ $('#tbEnterText input').focus();
 // refresh screen 
 location.reload();
 
+// List of all the symbols and their subcription times 
+http://serveraddress/Config/Sessions
+
 // open UserManagement in separate window
 window.open("http://127.0.0.1:1010/Config/TcHmiUserManagement?Configuration=default", "_blank", "fullscreen=no"); 
 
