@@ -19,3 +19,24 @@ Then CSR will verify the customer/fingerprint and send to Beckhoff Germany for i
 - Copy of Project and Boot Folder
 - Windows Event Logs for Application and System
 - Detailed steps to reproduce behavior 
+
+
+XAE and/or XAR?
+
+1)	Read all steps first
+2)	Make sure the TwinCAT 3.1 System Service (TcSysSrv) is stopped.  (Right Click My Computer, Manage, Services and Apps, Services)
+3)	Uninstall TC3 from the Control Panel and uninstall any TC3 Functions
+4)	Reboot.
+5)	Delete this folder:  C:\TwinCAT\3.1
+6)	In the Windows registry, delete these keys:
+    a.	64bit
+        i.	HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Beckhoff\TwinCAT3
+        ii.	HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Beckhoff\TwinCAT3 Functions
+    b.	32bit
+        i.	HKEY_LOCAL_MACHINE\SOFTWARE\Beckhoff\TwinCAT3
+        ii.	HKEY_LOCAL_MACHINE\SOFTWARE\Beckhoff\TwinCAT3 Functions
+7)	Reboot.
+8)	Install TC3.1 by right-clicking and choosing “run as administrator”.
+9)	Choose “full install”
+10)	Select the version(s) of Visual Studio for integration, you may select more than one.
+11)	Reboot
