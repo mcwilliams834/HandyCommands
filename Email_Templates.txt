@@ -20,7 +20,7 @@ Then CSR will verify the customer/fingerprint and send to Beckhoff Germany for i
 - Windows Event Logs for Application and System
 - Detailed steps to reproduce behavior 
 
-
+=========================================================
 XAE and/or XAR?
 
 1)	Read all steps first
