@@ -54,6 +54,7 @@ C:\Users\<USERNAME>\AppData\Local\Beckhoff\TwinCAT.Package.Manager.GUI\TcPkgUiSe
 
 // log files
 C:\ProgramData\Beckhoff\TcPkg\logs
+C:\ProgramData\Beckhoff\TcPkg\logs\msi
 
 // Add a Feed 
 tcpkg source add -n='testing' -s='https://public.tcpkg.beckhoff-cloud.com/api/v1/feeds/testing/' --priority=2 -u='BeckhoffWebsiteLoginName'
