@@ -61,6 +61,7 @@ tcpkg source add -n='testing' -s='https://public.tcpkg.beckhoff-cloud.com/api/v1
 
 // To download a package from the browser directly
 https://public.tcpkg.beckhoff-cloud.com/api/v1/feeds/stable/FindPackagesById()?id=%27TwinCAT.XAE.DocDataProvider.VS2019%27&semVerLevel=2.0.0%27
+https://public.tcpkg.beckhoff-cloud.com/api/v1/feeds/stable/FindPackagesById()?id=%27TwinCAT.XAE.MigrateCli%27&semVerLevel=1.0.883%27
 
 // Set unset KM/UM 
 tcpkg config set -n xarMode -v KMWithUM
@@ -76,6 +77,7 @@ tcpkg install TwinCAT.XAE.Migratecli -y
 close and reopen powershell with admin
 tcmigratecmd clean --whatIf False
 tcpkg uninstall all -y
+
 
 (*****************************************************
   ALL PACKAGES INLCUDED FOR TWINCAT XAE INSTALLATION
