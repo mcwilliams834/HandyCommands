@@ -40,3 +40,82 @@ XAE and/or XAR?
 9)	Choose “full install”
 10)	Select the version(s) of Visual Studio for integration, you may select more than one.
 11)	Reboot
+
+=====================================================================
+Call checklist:
+Ask name and company if it isnt in the system
+Versions of TwinCAT for the Engineering (XAE) and the controllers TwinCAT Runtime (XAR)
+Is this a new version u are trying
+When did this happen/start occuring
+Is this new or has this always happened
+Is this a running machine (what stage of development are you in)
+Is licensing okay
+Where is software residing (engineering pc vs cm vs the ipc)
+Quick assist or teams call
+Reiterate problem and set some sort of check in timeline with customer
+Prefer call or email back 
+========================================================================
+
+====================================================================================
+Subject: Feature Request Added to Development Backlog
+Dear [Customer],
+ 
+Thank you for submitting this feature request.
+ 
+After review, the request has been documented and added to our development backlog for future consideration. While we recognize its value for your application, it addresses a specialized use case and is not currently prioritized for development. As a result, we are unable to provide an estimated implementation timeline.
+ 
+If this functionality is critical to your application, we encourage you to discuss your requirements with your local Beckhoff sales or support representative. They can help evaluate potential alternatives and communicate your needs as part of future product planning discussions.
+ 
+If you need assistance connecting with your local Beckhoff representative, please let us know and we will be happy to help.
+ 
+Best regards,
+The Beckhoff Support Team
+ 
+====================================================================================
+Subject: Feature Under Active Development
+Dear [Customer],
+ 
+Thank you for your feature request.
+ 
+The functionality you requested is already part of our product roadmap and is currently under active development. While we cannot provide a specific release date or commit to when this functionality will become available, it remains an active development initiative.
+ 
+If this functionality is required for an upcoming project, we encourage you to discuss your requirements with your local Beckhoff sales or support representative. They can help evaluate available solutions and communicate your project needs to our product management team.
+ 
+If you need assistance connecting with your local Beckhoff representative, please let us know and we will be happy to help.
+ 
+Best regards,
+The Beckhoff Support Team
+ 
+====================================================================================
+Subject: Unable to Reproduce the Reported Issue
+ 
+Dear [Customer],
+ 
+Thank you for reporting this issue.
+ 
+Our engineering team investigated the reported behavior but was unable to reproduce the issue under controlled test conditions. Without a reliable method of reproducing the problem, we are unable to determine the root cause or validate a corrective solution.
+ 
+If additional information becomes available, such as system logs, diagnostic data, machine configuration details, or a repeatable sequence of events, we would be happy to continue the investigation.
+ 
+If the issue persists, we encourage you to work with your local Beckhoff support representative to gather additional diagnostic information and coordinate further analysis.
+ 
+If you need assistance connecting with your local Beckhoff representative, please let us know and we will be happy to help.
+ 
+Best regards,
+The Beckhoff Support Team
+ 
+====================================================================================
+Subject: Issue Documented for Future Development
+Dear [Customer],
+ 
+Thank you for reporting this issue.
+ 
+Our development team has reviewed the reported behavior and documented it for future consideration. Based on current development priorities and available engineering resources, this issue is not currently scheduled for correction.
+ 
+If a practical workaround is available, we would be happy to discuss it and help determine whether it meets your application's requirements.
+If resolving this issue is critical to your application, we encourage you to discuss your requirements with your local Beckhoff sales or support representative. They can provide additional guidance and help communicate the impact of this issue during future product planning discussions.
+ 
+If you need assistance connecting with your local Beckhoff representative, please let us know and we will be happy to help.
+ 
+Best regards,
+The Beckhoff Support Team
